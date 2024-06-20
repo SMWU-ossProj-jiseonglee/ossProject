@@ -32,7 +32,7 @@ Requirements:
 Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 
 **1. Mount Google Drive (if using Google Colab)**
-\from google.colab import drive
+from google.colab import drive
 drive.mount('/content/drive')
 cd /content/drive/MyDrive/forimagedetect/
 
