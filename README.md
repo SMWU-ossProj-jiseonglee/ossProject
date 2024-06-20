@@ -33,11 +33,11 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 <br>from google.colab import drive
 <br>drive.mount('/content/drive')
 <br>cd /content/drive/MyDrive/forimagedetect/
-**2. Install Required Libraries**
+<br>**2. Install Required Libraries**
 <br>!pip install torchinfo
 <br>!pip install torchvision
 <br>!pip install tqdm
-**3. Import Libraries and Set Device**
+<br>**3. Import Libraries and Set Device**
 
 **Dataset Preparation:**
 <br>The data collected through data crawling and direct photos were processed in Roboflow and labeled one by one directly to create a dataset of the desired shape.
