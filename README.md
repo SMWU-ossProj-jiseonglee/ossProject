@@ -9,7 +9,6 @@
     - [Training Process](#training-process)
 5. [Contributing](#contributing)
 6. [License](#license)
-7. [Acknowledgements](#acknowledgements)
 
 ## Introduction 
 This is **Barrier-Free Map Project** Project conducted as the final project for the Open Source Programming course at the Department of Artificial Intelligence Engineering, Sookmyung Women's University.   
@@ -76,5 +75,3 @@ To ensure a smooth collaboration process, please follow these guidelines:
 
 ## License
 This project is licensed under the MIT License.
-
-## Acknowledgements
