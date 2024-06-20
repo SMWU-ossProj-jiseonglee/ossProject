@@ -40,7 +40,7 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 **3. Import Libraries and Set Device**
 
 **Dataset Preparation:**
-The data collected through data crawling and direct photos were processed in Roboflow and labeled one by one directly to create a dataset of the desired shape.
+<br>The data collected through data crawling and direct photos were processed in Roboflow and labeled one by one directly to create a dataset of the desired shape.
 
 ## Model Details
 ### - EfficientNet
@@ -84,8 +84,6 @@ Test accuracy and other metrics are calculated to measure the model's effectiven
 Training history (loss and accuracy curves) is plotted using matplotlib to visualize model performance throughout the training process.
 
 ## Contributing
-We welcome contributions to improve this project. Whether it's fixing bugs, adding new features, improving documentation, or optimizing performance, your help is appreciated!
-
 ### How to Contribute
 1. Fork the Repository<br>
 2. Clone Your Fork<br>
