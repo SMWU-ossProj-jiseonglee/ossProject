@@ -43,7 +43,44 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 
 ## Model Details
 ### - EfficientNet
+The project utilizes EfficientNet, specifically EfficientNet-B0, as the backbone model for image classification tasks. EfficientNet is a family of convolutional neural networks (CNNs) that have been designed to achieve state-of-the-art performance with significantly fewer parameters and FLOPs (Floating Point Operations Per Second) compared to other popular CNN architectures like ResNet and Inception.
+
+**Key Features of EfficientNet**
+**Compound Scaling:** EfficientNet scales uniformly in depth, width, and resolution dimensions with a compound coefficient φ to balance network depth, width, and resolution.
+
+**Efficient Blocks:** EfficientNet uses a combination of mobile inverted bottleneck (MBConv) blocks and squeeze-and-excitation (SE) blocks to optimize model efficiency and accuracy.
+
+**Pretrained on ImageNet:** The pretrained EfficientNet-B0 model used in this project has been pretrained on the ImageNet dataset, providing a strong initial feature extractor for downstream tasks.
+
 ### - Training Process
+The training process involves fine-tuning the pretrained EfficientNet-B0 model on a custom dataset for image classification.
+
+Steps Involved in Training:
+- Dataset Preparation:
+The dataset is organized and prepared in the ./data directory.
+Images are structured into classes, and transformations (e.g., resizing, padding, and normalization) are applied using PyTorch's transforms.Compose.
+
+- Model Definition:
+A custom PretrainModel class is defined to load the pretrained EfficientNet-B0 model and replace the classifier head with a new fully connected layer for the specific number of classes in the dataset.
+
+- Training Configuration:
+Hyperparameters such as batch size, learning rate, number of epochs, and optimizer settings (Adam optimizer with learning rate scheduling) are configured.
+
+- Loss Function and Metrics:
+Cross-entropy loss is used as the loss function for training, suitable for multi-class classification tasks.
+Accuracy is monitored during training to evaluate model performance.
+
+- Training Loop:
+The model is trained using a combination of training and validation datasets.
+During each epoch, the model's performance is evaluated on both datasets to monitor loss and accuracy.
+Early stopping criteria are implemented to prevent overfitting and improve efficiency.
+
+- Model Evaluation:
+After training, the model's performance is evaluated on a separate test dataset to assess its generalization ability.
+Test accuracy and other metrics are calculated to measure the model's effectiveness.
+
+- Visualization and Reporting:
+Training history (loss and accuracy curves) is plotted using matplotlib to visualize model performance throughout the training process.
 
 ## Contributing
 We welcome contributions to improve this project. Whether it's fixing bugs, adding new features, improving documentation, or optimizing performance, your help is appreciated!
