@@ -43,7 +43,6 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 
 **3. Import Libraries and Set Device**
 
-
 ## Usage
 
 ## Model Details
@@ -51,8 +50,34 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 ### - Training Process
 
 ## Contributing
+We welcome contributions to improve this project. Whether it's fixing bugs, adding new features, improving documentation, or optimizing performance, your help is appreciated!
+
+### How to Contribute
+**1. Fork the Repository**
+**2. Clone Your Fork**`
+**3. Create a New Branch**
+**4. Make Your Changes**
+**5. Test Your Changes**
+**6. Commit Your Changes**
+**7. Push to Your Fork** 
+**8. Create a Pull Request**
+
+### Contributing Guidelines
+To ensure a smooth collaboration process, please follow these guidelines:
+- **Code Style:**
+    - Follow the existing code style and structure.
+    - Write clean and readable code with comments where necessary.
+- **Commits:**
+    - Make atomic commits that clearly state the purpose of the change.
+    - Avoid large, monolithic commits.
+- **Pull Requests:**
+    - Ensure your pull request is based on the latest code from the `main` branch.
+    - Provide a detailed description of what your pull request does.
+- **Issues:**
+    - Before starting work on a new feature or bug fix, please check if there's already an existing issue or discussion.
+    - If you find an issue, feel free to comment on it or open a new issue to discuss your idea.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Acknowledgements
