@@ -19,3 +19,16 @@ Using an image classification model built with **EfficientNet**, we classify res
 
 This project is created to facilitate smoother daily life for wheelchair users. Through this map, wheelchair users can easily fine restaurants that they can access.
 
+## Features
+
+## Installation
+
+## Usage
+
+## Model Details
+
+## Contributing
+
+## License
+
+## Acknowledgements
