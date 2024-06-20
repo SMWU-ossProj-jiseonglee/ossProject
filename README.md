@@ -26,6 +26,7 @@ This project is created to facilitate smoother daily life for wheelchair users. 
 ## Usage
 
 ## Model Details
+### EfficientNet
 
 ## Contributing
 
