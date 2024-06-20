@@ -56,30 +56,30 @@ The project utilizes EfficientNet, specifically EfficientNet-B0, as the backbone
 The training process involves fine-tuning the pretrained EfficientNet-B0 model on a custom dataset for image classification.
 
 Steps Involved in Training:
-- Dataset Preparation:
+- **Dataset Preparation:**
 The dataset is organized and prepared in the ./data directory.
 Images are structured into classes, and transformations (e.g., resizing, padding, and normalization) are applied using PyTorch's transforms.Compose.
 
-- Model Definition:
+- **Model Definition:**
 A custom PretrainModel class is defined to load the pretrained EfficientNet-B0 model and replace the classifier head with a new fully connected layer for the specific number of classes in the dataset.
 
-- Training Configuration:
+- **Training Configuration:**
 Hyperparameters such as batch size, learning rate, number of epochs, and optimizer settings (Adam optimizer with learning rate scheduling) are configured.
 
-- Loss Function and Metrics:
+- **Loss Function and Metrics:**
 Cross-entropy loss is used as the loss function for training, suitable for multi-class classification tasks.
 Accuracy is monitored during training to evaluate model performance.
 
-- Training Loop:
+- **Training Loop:**
 The model is trained using a combination of training and validation datasets.
 During each epoch, the model's performance is evaluated on both datasets to monitor loss and accuracy.
 Early stopping criteria are implemented to prevent overfitting and improve efficiency.
 
-- Model Evaluation:
+- **Model Evaluation:**
 After training, the model's performance is evaluated on a separate test dataset to assess its generalization ability.
 Test accuracy and other metrics are calculated to measure the model's effectiveness.
 
-- Visualization and Reporting:
+- **Visualization and Reporting:**
 Training history (loss and accuracy curves) is plotted using matplotlib to visualize model performance throughout the training process.
 
 ## Contributing
