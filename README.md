@@ -4,13 +4,12 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Model Details](#model-details)
+4. [Model Details](#model-details)
     - [EfficientNet](#efficientnet)
     - [Training Process](#training-process)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Acknowledgements](#acknowledgements)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Acknowledgements](#acknowledgements)
 
 ## Introduction 
 This is **Barrier-Free Map Project** Project conducted as the final project for the Open Source Programming course at the Department of Artificial Intelligence Engineering, Sookmyung Women's University.   
@@ -42,8 +41,6 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 <br>!pip install tqdm
 
 **3. Import Libraries and Set Device**
-
-## Usage
 
 ## Model Details
 ### - EfficientNet
