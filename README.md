@@ -42,24 +42,7 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 <br>!pip install tqdm
 
 **3. Import Libraries and Set Device**
-<br>import warnings
-<br>warnings.filterwarnings(action = "ignore")
-<br>import time
-<br>from tqdm import tqdm
-<br>import matplotlib.pyplot as plt
-<br>from PIL import Image
 
-<br>import numpy as np
-<br>import torch
-<br>from torch import nn, optim
-<br>from torchinfo import summary
-<br>from torchvision.models import efficientnet_b0
-<br>from torchvision import transforms
-<br>from torchvision.datasets import ImageFolder
-<br>from torch.utils.data import DataLoader, random_split
-<br>import torchvision.transforms.functional as F
-<br>from sklearn.metrics import accuracy_score
-<br>import sys
 
 ## Usage
 
