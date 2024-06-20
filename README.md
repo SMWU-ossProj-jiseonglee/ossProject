@@ -20,6 +20,9 @@ Using an image classification model built with **EfficientNet**, we classify res
 This project is created to facilitate smoother daily life for wheelchair users. Through this map, wheelchair users can easily fine restaurants that they can access.
 
 ## Features
+The model was trained through image recognition and allowed the model to distinguish between step images.
+
+Through the image recognition model, the model distinguishes the step image to determine whether the wheelchair is an accessible entrance or not.
 
 ## Installation
 
