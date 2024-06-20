@@ -32,34 +32,34 @@ Requirements:
 Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 
 **1. Mount Google Drive (if using Google Colab)**
-from google.colab import drive
-drive.mount('/content/drive')
-cd /content/drive/MyDrive/forimagedetect/
+<br>from google.colab import drive
+<br>drive.mount('/content/drive')
+<br>cd /content/drive/MyDrive/forimagedetect/
 
 **2. Install Required Libraries**
-!pip install torchinfo
-!pip install torchvision
-!pip install tqdm
+<br>!pip install torchinfo
+<br>!pip install torchvision
+<br>!pip install tqdm
 
 **3. Import Libraries and Set Device**
-import warnings
-warnings.filterwarnings(action = "ignore")
-import time
-from tqdm import tqdm
-import matplotlib.pyplot as plt
-from PIL import Image
+<br>import warnings
+<br>warnings.filterwarnings(action = "ignore")
+<br>import time
+<br>from tqdm import tqdm
+<br>import matplotlib.pyplot as plt
+<br>from PIL import Image
 
-import numpy as np
-import torch
-from torch import nn, optim
-from torchinfo import summary
-from torchvision.models import efficientnet_b0
-from torchvision import transforms
-from torchvision.datasets import ImageFolder
-from torch.utils.data import DataLoader, random_split
-import torchvision.transforms.functional as F
-from sklearn.metrics import accuracy_score
-import sys
+<br>import numpy as np
+<br>import torch
+<br>from torch import nn, optim
+<br>from torchinfo import summary
+<br>from torchvision.models import efficientnet_b0
+<br>from torchvision import transforms
+<br>from torchvision.datasets import ImageFolder
+<br>from torch.utils.data import DataLoader, random_split
+<br>import torchvision.transforms.functional as F
+<br>from sklearn.metrics import accuracy_score
+<br>import sys
 
 ## Usage
 
