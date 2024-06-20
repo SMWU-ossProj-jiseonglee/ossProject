@@ -12,7 +12,7 @@
 7. [License](#license)
 8. [Acknowledgements](#acknowledgements)
 
-## Introduction
+## Introduction 
 This is **Barrier-Free Map Project** Project conducted as the final project for the Open Source Programming course at the Department of Artificial Intelligence Engineering, Sookmyung Women's University.   
 
 Using an image classification model built with **EfficientNet**, we classify restaurant entrance photos to determine the presence of stairs.
@@ -32,7 +32,7 @@ Requirements:
 Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 
 **1. Mount Google Drive (if using Google Colab)**
-from google.colab import drive
+\from google.colab import drive
 drive.mount('/content/drive')
 cd /content/drive/MyDrive/forimagedetect/
 
