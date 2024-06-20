@@ -50,9 +50,9 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 We welcome contributions to improve this project. Whether it's fixing bugs, adding new features, improving documentation, or optimizing performance, your help is appreciated!
 
 ### How to Contribute
-1. Fork the Repository
-<br>2. Clone Your Fork
-<br>3. Create a New Branch
+1. Fork the Repository<br>
+2. Clone Your Fork
+3. Create a New Branch
 <br>4. Make Your Changes
 <br>5. Test Your Changes
 <br>6. Commit Your Changes
