@@ -47,13 +47,13 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 The project utilizes EfficientNet, specifically EfficientNet-B0, as the backbone model for image classification tasks. EfficientNet is a family of convolutional neural networks (CNNs) that have been designed to achieve state-of-the-art performance with significantly fewer parameters and FLOPs (Floating Point Operations Per Second) compared to other popular CNN architectures like ResNet and Inception.
 
 **Key Features of EfficientNet**
-**Compound Scaling:** <br>
+- **Compound Scaling:** <br>
 EfficientNet scales uniformly in depth, width, and resolution dimensions with a compound coefficient φ to balance network depth, width, and resolution.
 
-**Efficient Blocks:** <br>
+- **Efficient Blocks:** <br>
 EfficientNet uses a combination of mobile inverted bottleneck (MBConv) blocks and squeeze-and-excitation (SE) blocks to optimize model efficiency and accuracy.
 
-**Pretrained on ImageNet:** <br>
+- **Pretrained on ImageNet:** <br>
 The pretrained EfficientNet-B0 model used in this project has been pretrained on the ImageNet dataset, providing a strong initial feature extractor for downstream tasks.
 
 ### - Training Process
