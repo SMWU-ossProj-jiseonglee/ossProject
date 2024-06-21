@@ -57,7 +57,7 @@ EfficientNet uses a combination of mobile inverted bottleneck (MBConv) blocks an
 The pretrained EfficientNet-B0 model used in this project has been pretrained on the ImageNet dataset, providing a strong initial feature extractor for downstream tasks.
 
 <img width="585" alt="결과2" src="https://github.com/SMWU-ossProj-jiseonglee/ossProject/assets/162777421/c201dddb-4436-4ec1-8d33-72a01c79bffd">
-95.8128078817734 의 정확도 생성
+<br>95.8128078817734 의 정확도 생성
 
 ### - Training Process
 The training process involves fine-tuning the pretrained EfficientNet-B0 model on a custom dataset for image classification.
