@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배리어프리 음식점 지도</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-left: 30px;
+        }
+
+        h4 {
+            text-align: right;
+            margin-right: 20px;
+            color: #808080;
+        }
+        #map {
+            width: 100%;
+            height: 400px;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .iw_inner {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .iw_inner a {
+            color: black;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .iw_inner a:hover {
+            color: #007bff;
+            font-weight: bolder;
+        }
+    </style>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        const script = document.createElement('script');
+        script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${config.apikey}`;
+        script.async = true;
+        script.onload = function() {
+            const { naver } = window;
+            if (!naver) return;
+
+            const map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.54523, 126.9643),
+                zoom: 17
+            });
+
+            let locations = LOCATIONS_DATA;  
+
+            locations.forEach(function(location) {
+                let marker = new naver.maps.Marker({
+                    position: new naver.maps.LatLng(location.lat, location.lng),
+                    map: map
+                });
+
+                let infowindow = new naver.maps.InfoWindow({
+                    content: `
+                        <div class="iw_inner">
+                            
+                            <a href= ${location.link} target="_blank">📍${location.name}</a>
+                        </div>`
+                });
+
+                naver.maps.Event.addListener(marker, "click", function(e) {
+                    if (infowindow.getMap()) {
+                        infowindow.close();
+                    } else {
+                        infowindow.open(map, marker);
+                    }
+                });
+            });
+        };
+        document.head.appendChild(script);
+    });
+    </script>
+
+</head>
+<body>
+    <h1>🗺️ Barrier-Free Map</h1>
+    <div id="map" style="width:100%;height:400px;"></div>
+    <h4>현재 위치: 숙명여자대학교</h4>
+    <script src="apikey.js"></script>
+</body>
+</html>
