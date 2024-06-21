@@ -4,12 +4,14 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Installation](#installation)
-4. [Model Details](#model-details)
+4. [Data Preparation] (#Data-Preparation)
+5. [Model Details](#model-details)
     - [EfficientNet](#efficientnet)
     - [Training Process](#training-process)
+    - [Yolov5](#Yolov5)
     - [Web Service](#web-service)
-5. [Contributing](#contributing)
-6. [License](#license)
+6. [Contributing](#contributing)
+7. [License](#license)
 
 ## Introduction 
 This is **Barrier-Free Map Project** Project conducted as the final project for the Open Source Programming course at the Department of Artificial Intelligence Engineering, Sookmyung Women's University.   
@@ -42,6 +44,44 @@ Python 3.8+, PyTorch, torchvision, tqdm, numpy, scikit-learn, matplotlib, PIL
 
 **Dataset Preparation:**
 <br>The data collected through data crawling and direct photos were processed in Roboflow and labeled one by one directly to create a dataset of the desired shape.
+## Data Preparation
+
+###  Steps for Image Crawling
+
+1. **Download AutoCrawler**
+   - You can download AutoCrawler [here](https://github.com/YoongiKim/AutoCrawler).
+
+2. **Install Dependencies**
+   - Ensure you have Python installed, then install the required dependencies:
+     ```sh
+     pip install -r requirements.txt
+     ```
+
+3. **Run AutoCrawler**
+   - Configure `keywords.txt` with the keywords for images you want to crawl.
+   - Run the crawler:
+     ```sh
+     python main.py
+     ```
+
+4. **Collect Images**
+   - The images will be saved in the `download` directory, organized by keyword.
+     
+### Steps for roboflow Labeling
+
+1. **Upload Images**
+   - Go to your RoboFlow account.[RoboFlow](https://roboflow.com) account
+   - Create a new project and select the object detection task.
+   - Upload your images to the project.
+
+2. **Label Images**
+   - Use the RoboFlow annotation tool to draw bounding boxes around the objects in each image.
+   - Assign the appropriate labels to each object.
+
+3. **Export Labeled Data**
+   - Once labeling is complete, export the dataset in your preferred format (e.g., COCO, YOLO, Pascal VOC).
+   - Download the labeled dataset to use for training your object detection model.
+
 
 ## Model Details
 ### - EfficientNet
@@ -89,6 +129,41 @@ Test accuracy and other metrics are calculated to measure the model's effectiven
 
 - **Visualization and Reporting:**
 Training history (loss and accuracy curves) is plotted using matplotlib to visualize model performance throughout the training process.
+
+### - Yolov5
+
+
+To train a custom object detection model using YOLOv8, follow these steps:
+
+1. **Clone YOLOv8 Repository**
+   - Clone the YOLOv8 repository from [YOLOv8 GitHub](https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5/yolov5)
+     ```sh
+     git clone https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5/yolov5
+     ```
+
+2. **Prepare Custom Dataset**
+   - Organize your custom dataset in YOLOv5 format (images and labels).
+
+3. **Train the Model**
+   - Use the following command to train your custom YOLOv8 model:
+     ```sh
+     python train.py --data custom_data.yaml --cfg models/yolov8.yaml --weights weights/pretrained.pt
+     ```
+
+4. **Evaluate and Use**
+   - After training, evaluate the model and use it for inference in your applications.
+
+### Example
+
+```python
+import roboflow
+
+# Load the project
+rf = roboflow.Roboflow(api_key="YOUR_API_KEY")
+project = rf.workspace().project("PROJECT_NAME")
+
+# Download the dataset
+dataset = project.version("VERSION_NUMBER").download("yolov8")
 
 ### - Web Service
 This project generates a web page displaying a map with markers for barrier-free restaurants using data from a text file. The map is created using the Naver Maps API, and the data is dynamically injected into the HTML template through a Python script.
