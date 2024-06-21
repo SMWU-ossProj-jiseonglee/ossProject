@@ -4,7 +4,7 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Installation](#installation)
-4. [Data Preparation] (#Data-Preparation)
+4. [Data Preparation](#Data-Preparation)
 5. [Model Details](#model-details)
     - [EfficientNet](#efficientnet)
     - [Training Process](#training-process)
