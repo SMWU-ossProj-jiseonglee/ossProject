@@ -144,10 +144,9 @@ To train a custom object detection model using YOLOv8, follow these steps:
     !pip install ultralytics
      ```
    
-   
-4. **Train the Model**
+3. **Train the Model**
    - Use the following command to train your custom YOLOv8 model:
-     ```sh
+      ```sh
     !yolo task=detect mode=train model=yolov8n.pt data={dataset.location}/data.yaml  epochs= 100  plots=True
      ```
 
