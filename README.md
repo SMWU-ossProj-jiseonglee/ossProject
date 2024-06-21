@@ -135,22 +135,23 @@ Training history (loss and accuracy curves) is plotted using matplotlib to visua
 
 To train a custom object detection model using YOLOv8, follow these steps:
 
-1. **Clone YOLOv8 Repository**
-   - Clone the YOLOv8 repository from [YOLOv8 GitHub](https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5/yolov5)
-     ```sh
-     git clone https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5/yolov5
-     ```
-
-2. **Prepare Custom Dataset**
+1. **Prepare Custom Dataset**
    - Organize your custom dataset in YOLOv5 format (images and labels).
-
-3. **Train the Model**
+     
+2. **Install module**
+     ```sh
+    !pip install --upgrade urllib3
+    !pip install ultralytics
+     ```
+   
+   
+4. **Train the Model**
    - Use the following command to train your custom YOLOv8 model:
      ```sh
-     python train.py --data custom_data.yaml --cfg models/yolov8.yaml --weights weights/pretrained.pt
+    !yolo task=detect mode=train model=yolov8n.pt data={dataset.location}/data.yaml  epochs= 100  plots=True
      ```
 
-4. **Evaluate and Use**
+5. **Evaluate and Use**
    - After training, evaluate the model and use it for inference in your applications.
 
 ### Example
