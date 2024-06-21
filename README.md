@@ -94,13 +94,13 @@ Training history (loss and accuracy curves) is plotted using matplotlib to visua
 This project generates a web page displaying a map with markers for barrier-free restaurants using data from a text file. The map is created using the Naver Maps API, and the data is dynamically injected into the HTML template through a Python script.
 
 - **Python Script (generate_map.py):**
-Reads the restaurant data from locations.txt.<br>
+<br>Reads the restaurant data from locations.txt.<br>
 Parses each line to extract latitude, longitude, name, and link.<br>
 Inserts this data into map_template.html by replacing a placeholder.<br>
 Writes the modified HTML content to map.html.<br>
 
 - **HTML Template (map_template.html):**
-Sets up the basic HTML structure and styles.<br>
+<br>Sets up the basic HTML structure and styles.<br>
 Loads the Naver Maps API.<br>
 Displays a map centered on a predefined location.<br>
 Adds markers and info windows for each restaurant based on the injected data.<br>
