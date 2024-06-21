@@ -99,7 +99,7 @@ Parses each line to extract latitude, longitude, name, and link.<br>
 Inserts this data into map_template.html by replacing a placeholder.<br>
 Writes the modified HTML content to map.html.<br>
 
--**HTML Template (map_template.html):**
+- **HTML Template (map_template.html):**
 Sets up the basic HTML structure and styles.<br>
 Loads the Naver Maps API.<br>
 Displays a map centered on a predefined location.<br>
